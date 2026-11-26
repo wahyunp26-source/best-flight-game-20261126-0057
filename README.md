@@ -1,7 +1,7 @@
 # Zephyr Rings — Flight over the Azure Isles
 
-[![rank](https://make.fun/badge/best-flight-game-20261126-0057/wahyunp26-source/best-flight-game/rank.svg)](https://make.fun/c/best-flight-game-20261126-0057)
-[![reward](https://make.fun/badge/best-flight-game-20261126-0057/wahyunp26-source/best-flight-game/reward.svg)](https://make.fun/c/best-flight-game-20261126-0057)
+[![rank](https://make.fun/badge/best-flight-game-20261126-0057/wahyunp26-source/best-flight-game-20261126-0057/rank.svg)](https://make.fun/c/best-flight-game-20261126-0057)
+[![reward](https://make.fun/badge/best-flight-game-20261126-0057/wahyunp26-source/best-flight-game-20261126-0057/reward.svg)](https://make.fun/c/best-flight-game-20261126-0057)
 [![bounty](https://make.fun/badge/best-flight-game-20261126-0057.svg)](https://make.fun/c/best-flight-game-20261126-0057)
 
 An original 3D flight game for the make.fun bounty
