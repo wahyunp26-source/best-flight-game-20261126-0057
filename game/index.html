@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zephyr Rings — Flight over the Azure Isles</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+  <canvas id="gl"></canvas>
+
+  <!-- ======================= HUD ======================= -->
+  <div id="hud" class="hidden">
+    <div id="hud-left" class="panel">
+      <div class="label">SCORE</div>
+      <div id="score">0</div>
+      <div id="combo" class="combo">COMBO ×1</div>
+    </div>
+
+    <div id="hud-center">
+      <div id="gate-banner">GATE 1 / 18</div>
+      <div id="gate-arrow-wrap">
+        <div id="gate-arrow">➤</div>
+        <div id="gate-dist">0 m</div>
+      </div>
+      <div id="flash"></div>
+    </div>
+
+    <div id="hud-right" class="panel">
+      <div class="label">TIME</div>
+      <div id="time">2:30</div>
+      <div id="best-combo">BEST ×1</div>
+    </div>
+
+    <div id="hud-instruments" class="panel">
+      <canvas id="attitude" width="132" height="132"></canvas>
+      <div id="readouts">
+        <div class="readout"><span class="rlabel">SPD</span><span id="spd">0</span><span class="unit">kt</span></div>
+        <div class="readout"><span class="rlabel">ALT</span><span id="alt">0</span><span class="unit">ft</span></div>
+        <div class="readout"><span class="rlabel">HDG</span><span id="hdg">000°</span><span class="unit"></span></div>
+      </div>
+    </div>
+
+    <div id="hud-keys" class="panel">
+      <div>← → ↑ ↓ / WASD&nbsp; steer</div>
+      <div>SHIFT boost · SPACE brake · M sound</div>
+    </div>
+  </div>
+
+  <!-- ======================= START ======================= -->
+  <div id="start-screen" class="overlay">
+    <div class="card">
+      <div class="kicker">AZURE ISLES AIR RALLY</div>
+      <h1>ZEPHYR<br>RINGS</h1>
+      <p class="tag">Thread all <b>18 glowing rings</b> scattered over the isles before the
+      clock runs out. Chain clean passes to build your combo — clip the centre for a
+      <b>PERFECT</b>. Mind the spires, mind the sea.</p>
+      <div class="controls-grid">
+        <div><span class="key">←</span><span class="key">→</span><span class="key">↑</span><span class="key">↓</span> or <span class="key">W</span><span class="key">A</span><span class="key">S</span><span class="key">D</span></div><div>pitch &amp; bank</div>
+        <div><span class="key">MOUSE</span></div><div>steer toward the pointer</div>
+        <div><span class="key">SHIFT</span></div><div>boost</div>
+        <div><span class="key">SPACE</span></div><div>air brake</div>
+        <div><span class="key">M</span></div><div>sound on / off</div>
+      </div>
+      <button id="start-btn">START ENGINE</button>
+      <div class="fineprint">A complete run takes about two minutes. Sound on for the full roar.</div>
+    </div>
+  </div>
+
+  <!-- ======================= RESULTS ======================= -->
+  <div id="end-screen" class="overlay hidden">
+    <div class="card">
+      <div class="kicker" id="end-kicker">RUN COMPLETE</div>
+      <h1 id="grade">S</h1>
+      <div id="final-score">0</div>
+      <table id="results">
+        <tr><td>Rings threaded</td><td id="r-gates">0 / 18</td></tr>
+        <tr><td>Perfect centres</td><td id="r-perfect">0</td></tr>
+        <tr><td>Best combo</td><td id="r-combo">×1</td></tr>
+        <tr><td>Crashes</td><td id="r-crash">0</td></tr>
+        <tr><td>Time bonus</td><td id="r-bonus">+0</td></tr>
+      </table>
+      <button id="again-btn">FLY AGAIN</button>
+    </div>
+  </div>
+
+  <div id="crash-flash"></div>
+  <div id="vignette"></div>
+</div>
+
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
